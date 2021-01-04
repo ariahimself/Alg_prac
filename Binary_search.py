@@ -25,7 +25,20 @@ class Solution(object):
         return -1
 
 
+    def test(self, nums, target):
+        binary_search = Solution()
+        Index = binary_search.search(nums, target)
 
+        if target in nums:
+
+            index = nums.index(target)
+            print (index)
+        else :
+            index = -1
+
+
+
+        return index == Index
 
 
 nums = [-1,0,3,5,9,12]
@@ -35,4 +48,11 @@ binary_search = Solution()
 
 Index = binary_search.search(nums, target)
 
-print (Index)
+Output = binary_search.test(nums, target)
+
+print (Output)
+
+if Output == True:
+    print('--------Approved--------')
+else: 
+    print('--------Rejected--------')
